@@ -1,50 +1,13 @@
-# React + TypeScript + Vite
+# heroesApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Esta aplicación presenta un sistema de login que permite ingresar a los usuarios ya registrados. Una vez que inician sesión, los usuarios pueden visualizar tarjetas con distintos superhéroes. También pueden buscar héroes específicos o filtrar según la editorial: Marvel o DC Comics.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Búsqueda de Superhéroes**: Permite buscar un héroe específico a través de la barra de búsqueda.
+- **Selección de Superhéroe**: Al hacer clic en un superhéroe, se abre una página donde se muestra la imagen y la descripción del héroe seleccionado.
+- **Filtrado por Editorial**: Selecciona entre héroes de Marvel y DC Comics.
+- **Login**: La página de login está protegida y solo es accesible para usuarios autenticados. Si no están registrados, visualizarán un alert que indica que el usuario o la contraseña son incorrectos.
+- **Logout**: Los usuarios pueden cerrar sesión y regresan a la página de login.
